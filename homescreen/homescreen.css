@@ -1,12 +1,13 @@
 
 body{
-  background-image: url('images/bg-home.jpg');
+  background-image: url('images/bg-home.gif');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   overflow: auto;
   display: flex;
   flex-direction: column;
+  margin-bottom: 150px;
 }
 .container{
   display: flex;
@@ -71,6 +72,7 @@ footer{
   position: fixed;
   bottom: 0;
   width: 100%;
+  margin-top: 150px;
 }
 footer div{
   color: white;
