@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading</title>
+	<link rel="stylesheet" href="loadingbar.css"/>
+</head>
+<body>
+	<br><br><br><br><br><br><br>
+	<div id="loading">
+		<h2>Loading</h2>
+		<div id="text">Task 1: Searching for a shop</div>
+		<div id="bar">
+		  <div id="progress"></div>
+		</div>
+	</div>
+
+	<script>
+		var progress = 0;
+		var progressBar = document.getElementById("progress");
+		var progressText = document.getElementById("text");
+
+		function updateProgressBar(){
+			if(progress < 100){
+				progress += 10;
+				progressBar.style.width = progress + "%";
+			}
+			if(progress == 10){
+				progressText.innerHTML = "Task 2: Shop acquired";
+			}else if(progress == 20){
+				progressText.innerHTML = "Task 3: Preparing the shop";
+			}else if(progress == 30){
+				progressText.innerHTML = "Task 4: Preparing materials";
+			}else if(progress == 40){
+				progressText.innerHTML = "Task 5: Clean the shop";
+			}else if(progress == 50){
+				progressText.innerHTML = "Task 6: Turn on the lights";
+			}else if(progress == 60){
+				progressText.innerHTML = "Task 7: Turn on the music";
+			}else if(progress == 70){
+				progressText.innerHTML = "Task 8: Money inside your wallet";
+			}else if(progress == 80){
+				progressText.innerHTML = "Task 9: People struggling";
+			}else if(progress == 90){
+				progressText.innerHTML = "Task 10: JOHN CENA ON THE HOUSE";
+			}else if(progress == 100){
+				progressText.innerHTML = "Wǒ hěn xǐ huàn bīn qí lín";
+    			setTimeout(() => {
+        			window.location.href = "homescreen.html";
+    				}, 5000);
+				}
+		}
+		setInterval(updateProgressBar, 1000);
+	</script>
+</body>
+</html>
