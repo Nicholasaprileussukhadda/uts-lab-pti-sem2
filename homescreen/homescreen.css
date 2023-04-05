@@ -10,10 +10,7 @@ body{
   flex-direction: column;
   margin-bottom: 150px;
 }
-.container{
-  display: flex;
-  justify-content: center;
-}
+
 
 #upgrademenu div { 
   margin: 150px auto 0; 

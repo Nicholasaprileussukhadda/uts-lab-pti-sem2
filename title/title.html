@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missyue Clicker | Title Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="title.css">
+</head>
+<body>
+    <div id="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Missyue Clicker</a>
+            <img src="../homescreen/images/mixue-clicked.png" style="width: 50px;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="homescreen.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../about/about.html">About Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="parallax content">
+           <div class="judul">
+            <div>
+            <h1>WELCOME TO MISSYE CLICKER GAME</h1>
+            <img id="gambartitle" src="../homescreen/images/mixue-diem.png" onclick="gantiGambar()" >
+            <br>
+            <label for="username">Enter Your Character name:</label>
+            <br>
+            <input type="text" id="username" name="username"> 
+        </div>
+        <br>
+            <span class='start-btn' onclick="location.href='../homescreen/loadingscreen.html';" >START</span>
+           </div>
+        </div>
+        <div class="parallax info">
+            
+        </div>
+
+
+    <footer>
+        <div class="row mt-3 d-flex flex-md-row flex-column justify-content-between align-items-center text-center pt-3 pb-3 mx-auto">
+            <div class="col-md-6 text-center mb-3 mb-md-0">
+                <h5 class="fw-bold">Missyue Clicker</h5>
+                <p>Created by Group 9</p>
+                <p>&copy copyright 2023</p>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <a href="https://www.umn.ac.id/?gclid=Cj0KCQjwz6ShBhCMARIsAH9A0qVQt97EhNy_s9RZUcjBO5DhdSBqRIu4afR-F624j4SQ2hUJ7KnAqnQaAhKlEALw_wcB"><img src="../images/logo-akreditasi.png" class="img-fluid"></a>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script>
+        var gambarAsli = document.getElementById("gambartitle");
+        var gambarBaru = "../homescreen/images/mixue-clicked.png";
+        var gambarLama = gambarAsli.src;
+        
+        gambarAsli.onclick = function() {
+            if (gambarAsli.src == gambarLama) {
+                gambarAsli.src = gambarBaru;
+                setTimeout(function() {
+                  gambarAsli.src = gambarLama;
+                }, 150); 
+              }
+        }
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
