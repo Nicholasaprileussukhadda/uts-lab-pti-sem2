@@ -7,11 +7,13 @@
     <title>Idle Clicker | Kelompok 9</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="homescreen.css">
+    	<script src="homescren.js"></script>
+
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">WELCOME</a>
+      <a class="navbar-brand" href="#">Missyue Clicker</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,11 +30,34 @@
     </div>
   </nav>
 
-      
-     
+	<h2 id="clock" style="text-align: center;"></h2>
 
-      
+  <footer>
+    <div class="row mt-3 d-flex flex-md-row flex-column justify-content-between align-items-center text-center pt-3 pb-3 mx-auto">
+        <div class="col-md-6 text-center mb-3 mb-md-0">
+            <h5 class="fw-bold">Missyue Clicker</h5>
+            <p>Created by Group 9</p>
+            <p>&copy copyright 2023</p>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+            <a href="https://www.umn.ac.id/?gclid=Cj0KCQjwz6ShBhCMARIsAH9A0qVQt97EhNy_s9RZUcjBO5DhdSBqRIu4afR-F624j4SQ2hUJ7KnAqnQaAhKlEALw_wcB"><img src="../images/logo-akreditasi.png" class="img-fluid"></a>
+        </div>
+    </div>
+</footer>
 
+  <script>
+    function Clock() {
+      var now = new Date();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var second = now.getSeconds();
+      var timeString = hours + ":" + minutes + ":" + second;
+      document.getElementById("clock").innerHTML = timeString;
+    }
+    
+    setInterval(Clock, 1);
+    
+  </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
