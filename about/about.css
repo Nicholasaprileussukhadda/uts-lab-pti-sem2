@@ -1,5 +1,5 @@
 body{
-    background-image: url(images/aboutwallpaper.webp);
+    background-image: url(../images/aboutwallpaper.webp);
 }
 
 .container{
@@ -8,7 +8,7 @@ body{
 }
 
 .card{
-    background-image: url(images/Cardbackground.avif);
+    background-image: url(../images/Cardbackground.avif);
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 50px;
@@ -52,7 +52,7 @@ body{
 }
 
 footer{
-    background-image: url(images/footer-background.jpg) ;
+    background-image: url(../images/footer-background.jpg) ;
     height: 150px;
     position: fixed;
     left: 0;
