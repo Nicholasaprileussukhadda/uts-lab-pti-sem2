@@ -8,84 +8,228 @@
     <link hrel="stylesheet" src="autoclick.css">
 </head>
 <body>
-      <div class="level-up-bar">
-        <progress class="progress-bar" min="0" max="100" value="100"></progress>
-        <div class="level-text">Level 1</div>
-      </div>
-      <div id="MoneyCounter">
-        <p>
-          <img src="images/food.png" id="a">
-          <output type="inline" id="MoneyValue" value="0">0</output>
-        </p>
-        <button id="b">Autoclick 1</button>
-        <button id="c">Autoclick 2</button>
-        <button onclick="showImage()">Show Image</button>
-        <img src="image.jpg" id="myImage" style="display:none;">
-        <button onclick="showImage1()">Show Image</button>
-        <img src="image.jpg" id="myImage1" style="display:none;">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Item Shop</button>
-        <div class="modal" id="myModal">
-            <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                          <h4 class="modal-title">Item Shop</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-sm-6 d-grid mx-auto">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+  <h1 align="center">Idle Clicker Game</h1>
+  <br><br>
+    <div id="container-fluid mt-3" class="container">
+      <div class="row">
+        <div class="col-sm-2"  align="center" id="row1">
+          <div id="MoneyCounter">
+            <p>
+              <img src="images/food.png" id="a">
+              <output type="inline" id="MoneyValue" value="0">0</output>
+            </p>
+          </div>
+          <h4 align="center">Dagangan Terbaru Anda</h4>
+          <img src="images/222.png" style="display:none;" id="esk"><br>
+          <button class="btn btn-primary" onclick="jualEs()" id="es" style="display:none;">Jual Es Krim</button>
+          <br>
+          <img src="images/230.png" style="display:none;" id="boba"><br>
+          <button class="btn btn-primary" onclick="jualBoba()" id="boba1" style="display:none;">Jual Minuman Boba</button>
+          <hr />
+          <img src="images/229.png" style="display:block;">
+          <img src="images/food.png"><p>30000</p>
+          <button class="btn btn-primary" onclick="confirmPurchase()">Beli Piala</button><br>
+          <br>
+          <div id="da">
+            <img src="images/222.png"><br>
+            <img src="images/food.png" ><p>20</p>
+            <button class="btn btn-primary" onclick="upgradeDagangan1()" >Bisnis Jualan Es Krim</button>
+          </div>
+          <br>
+          <div id="da1">
+            <img src="images/230.png"><br>
+            <img src="images/food.png"><p>100</p>
+            <button class="btn btn-primary" onclick="upgradeDagangan2()" >Bisnis Jualan Minuman Boba</button>
+          </div>
+          <br>
+        </div>
+        <div class="col-sm-10" align="center">
+          <div class="level-up-bar">
+            <div id="progress-bar" class="progress">
+              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+              </div>
+            </div>
+            <div class="level-text">Level 1</div>
+          </div>          
+          <div class="row">
+          <div class="col-sm-6" align="center">
+            <h4>Pilih Jenis Autoclicks</h4>
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="images/food.png"><p>5</p>
+                <button class="btn btn-primary" id="b">Autoclick 1</button>
+              </div>
+              <div class="col-sm-4">
+                <img src="images/food.png"><p>50</p>          
+                <button class="btn btn-primary" id="c">Autoclick 2</button>  
+              </div>
+              <div class="col-sm-4">
+                <img src="images/food.png"><p>500</p>          
+                <button class="btn btn-primary" id="h">Autoclick 3</button>  
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6" align="center">
+            <h4>Cabang</h4>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Buka Cabang</button>
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Cabang</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <button class="btn btn-primary" onclick="showImage()">Cabang 1</button>
+                        <br>
+                        <img src="images/food.png" align="center"><br>
+                        <p>50</p> 
+                      </div>
+                      <div class="col-sm-6" align="center">
+                        <button class="btn btn-primary" onclick="showImage1()">Cabang 2</button>
+                        <br>
+                        <img src="images/food.png" align="center"><br>
+                        <p>100</p> 
+                      </div>
                     </div>
                   </div>
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
             </div>
+          </div>
+          </div>
+          <div class="col-sm-12" align="center">
+            <hr />
+            <img src="images/250.png" id="mixue" class="stretch-animation">
+          </div>
+          <div id="imageConatiner" align="center">
+          <div class="row">
+            <div class="col-sm-6 d-grid mx-auto">
+              <img src="images/252.png" id="myImage" style="display:none;">
+            </div>
+            <div class="col-sm-6 d-grid mx-auto">
+              <img src="images/253.png" id="myImage1" style="display:none;">
+            </div>
+          </div>
+        </div>
         </div>
       </div>
-      
+      </div>
+    </div>
+    </div>  
     <script>
-      var money = 0;
-      var counter = 0;
-      var counter1 = 0;
+        var money = 0;
+        var counter = 0;
+        var counter1 = 0;
+        var counter2 = 0;
 
-      const progressBar = document.querySelector('.progress-bar');
-			const levelText = document.querySelector('.level-text');
+        const progressBar = document.querySelector('#progress-bar .progress-bar');
+        const levelText = document.querySelector('.level-text');
 
-			let currentLevel = 1;
-			let currentExp = 0;
-			let maxExp = 100;
+        let currentLevel = 1;
+        let currentExp = 0;
+        let maxExp = 100;
 
-      function updateLevel() {
- 			 	currentLevel++;
-  			currentExp = 0;
-  			maxExp = currentLevel * 100;
-  			levelText.textContent = `Level ${currentLevel}`;
-			}
+        function gameovercheck(){
+          if(gameover==0){
+            alert("Selamat anda memenangkan permainan ini");
+            gameover++;
+            setTimeout(function() {
+              window.location.href = 'a';
+            }, 3000);
+				  }
+			  }
 
-			function updateExp(amount) {
-  			currentExp += amount;
-  			if (currentExp >= maxExp) {
-    			updateLevel();
-  			}
-  			progressBar.style.width = `${(currentExp / maxExp) * 100}%`;
-			}	
-
-        function increaseMoney() {
-          document.getElementById("MoneyValue").value = money;
-          money += 1;
-          updateExp(10);
-          if (document.getElementById("myImage").style.display === "block") {
-            money += 3;
-            
-          }else if (document.getElementById("myImage1").style.display === "block") {
-            money += 10;
-            
+        function confirmPurchase(){
+          if(money >= 30000 && currentLevel >= 15){
+            money -=30000;
+            gameovercheck();
+          }else if(money < 30000){
+            alert("Not enough money.")
+          }else {
+            alert("Level terlalu rendah.");
           }
         }
-      
+
+        var gameover = 0;
+
+        function updateLevel() {
+          if (currentLevel < 30) {
+            currentLevel++;
+            currentExp = 0;
+            maxExp = currentLevel * 100;
+            levelText.textContent = `Level ${currentLevel}`;
+          }   
+        }
+
+        function updateExp(amount) {
+          if (currentLevel < 30) {
+            currentExp += amount;
+            if (currentExp >= maxExp) {
+            updateLevel();
+          }
+          progressBar.style.width = `${(currentExp / maxExp) * 100}%`;
+          }
+        }
+
+
+            function increaseMoney() {
+                document.getElementById("MoneyValue").value = money;
+                money += 1;
+                updateExp(2);
+                if (document.getElementById("myImage").style.display === "block" && document.getElementById("myImage1").style.display === "block") {
+                    money += 7; 
+                }else if (document.getElementById("myImage1").style.display === "block") {
+                    money += 2; 
+                }else if(document.getElementById("myImage").style.display === "block"){
+                    money += 5;
+                }
+            }
+
+
+        function upgradeDagangan1(){
+            if (money >= 20 && counter2 <1){
+                document.getElementById("es").style.display = "block";
+                document.getElementById("esk").style.display = "block";
+                document.getElementById("da").style.display = "none";
+                money -= 20;
+            } else if (money < 20){
+                alert("Not enough money.");
+            } else {
+                alert("Already Purchased");
+            }
+        }
+
+        function jualEs(){
+            document.getElementById("MoneyValue").value = money;
+            money +=3;
+            updateExp(2);
+        }
+
+        function upgradeDagangan2(){
+            if (money >= 100 && counter2 <1){
+                document.getElementById("boba").style.display = "block";
+                document.getElementById("boba1").style.display = "block";
+                document.getElementById("da1").style.display = "none";
+                money -= 100;
+            } else if (money < 100){
+                alert("Not enough money.");
+            } else {
+                alert("Already Purchased");
+            }
+        }
+
+        function jualBoba(){
+            document.getElementById("MoneyValue").value = money;
+            money +=8;
+            updateExp(2);
+        }
+
         const button = document.getElementById("b");
         button.addEventListener("click", function() {
           if (money >= 5) {
@@ -100,7 +244,7 @@
               button.disabled = false;
             }, 10000);
           } else {
-            alert("Not enough money");
+            alert("Not enough money.");
           }
         });
       
@@ -118,7 +262,25 @@
               ba.disabled = false;
             }, 10000);
           } else {
-            alert("Not enough money");
+            alert("Not enough money.");
+          }
+        });
+
+        const bat = document.getElementById("h");
+        bat.addEventListener("click", function() {
+          if (money >= 500) {
+            money-=500;
+            var interval = setInterval(function() {
+              increaseMoney();
+            }, 1);
+      
+            bat.disabled = true;
+            setTimeout(function() {
+              clearInterval(interval);
+              bat.disabled = false;
+            }, 10000);
+          } else {
+            alert("Not enough money.");
           }
         });
 
@@ -154,25 +316,15 @@
           }
         }
 
-        const image = document.getElementById("a");
+        const image = document.getElementById("mixue");
         image.addEventListener("click", increaseMoney);
-        
-        var modal = document.getElementById("myModal");
-    		var btn = document.getElementById("myBtn");
-    		var span = document.getElementsByClassName("close")[0];
-    		btn.onclick = function() {
-        		modal.style.display = "block";
-    		}
-    		span.onclick = function() {
-        		modal.style.display = "none";
-    		}               
-    		window.onclick = function(event) {
-        		if (event.target == modal) {
-           		 	modal.style.display = "none";
-        		}
-    		}
-		
 
+  window.onclick = function(event) {
+    var modal = document.getElementById("myModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
       </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
