@@ -4,41 +4,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>CapyGotcha</title>
+    <title>mixue</title>
     <link hrel="stylesheet" src="autoclick.css">
 </head>
 <body>
-  <h1 align="center">Idle Clicker Game</h1>
-  <br><br>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Missyue Clicker</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="homescreen.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about/about.html">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br><br>
+
     <div id="container-fluid mt-3" class="container">
       <div class="row">
         <div class="col-sm-2"  align="center" id="row1">
           <div id="MoneyCounter">
             <p>
-              <img src="images/food.png" id="a">
+              <img src="../images/food.png" id="a">
               <output type="inline" id="MoneyValue" value="0">0</output>
             </p>
           </div>
           <h4 align="center">Dagangan Terbaru Anda</h4>
-          <img src="images/222.png" style="display:none;" id="esk"><br>
+          <img src="../images/222.png" style="display:none;" id="esk"><br>
           <button class="btn btn-primary" onclick="jualEs()" id="es" style="display:none;">Jual Es Krim</button>
           <br>
-          <img src="images/230.png" style="display:none;" id="boba"><br>
+          <img src="../images/230.png" style="display:none;" id="boba"><br>
           <button class="btn btn-primary" onclick="jualBoba()" id="boba1" style="display:none;">Jual Minuman Boba</button>
           <hr />
-          <img src="images/229.png" style="display:block;">
-          <img src="images/food.png"><p>30000</p>
+          <img src="../images/229.png" style="display:block;">
+          <img src="../images/food.png"><p>30000</p>
           <button class="btn btn-primary" onclick="confirmPurchase()">Beli Piala</button><br>
           <br>
           <div id="da">
-            <img src="images/222.png"><br>
-            <img src="images/food.png" ><p>20</p>
+            <img src="../images/222.png"><br>
+            <img src="../images/food.png" ><p>20</p>
             <button class="btn btn-primary" onclick="upgradeDagangan1()" >Bisnis Jualan Es Krim</button>
           </div>
           <br>
           <div id="da1">
-            <img src="images/230.png"><br>
-            <img src="images/food.png"><p>100</p>
+            <img src="../images/230.png"><br>
+            <img src="../images/food.png"><p>100</p>
             <button class="btn btn-primary" onclick="upgradeDagangan2()" >Bisnis Jualan Minuman Boba</button>
           </div>
           <br>
@@ -57,15 +75,15 @@
             <h4>Pilih Jenis Autoclicks</h4>
             <div class="row">
               <div class="col-sm-4">
-                <img src="images/food.png"><p>5</p>
+                <img src="../images/food.png"><p>5</p>
                 <button class="btn btn-primary" id="b">Autoclick 1</button>
               </div>
               <div class="col-sm-4">
-                <img src="images/food.png"><p>50</p>          
+                <img src="../images/food.png"><p>50</p>          
                 <button class="btn btn-primary" id="c">Autoclick 2</button>  
               </div>
               <div class="col-sm-4">
-                <img src="images/food.png"><p>500</p>          
+                <img src="../images/food.png"><p>500</p>          
                 <button class="btn btn-primary" id="h">Autoclick 3</button>  
               </div>
             </div>
@@ -85,13 +103,13 @@
                       <div class="col-sm-6">
                         <button class="btn btn-primary" onclick="showImage()">Cabang 1</button>
                         <br>
-                        <img src="images/food.png" align="center"><br>
+                        <img src="../images/food.png" align="center"><br>
                         <p>50</p> 
                       </div>
                       <div class="col-sm-6" align="center">
                         <button class="btn btn-primary" onclick="showImage1()">Cabang 2</button>
                         <br>
-                        <img src="images/food.png" align="center"><br>
+                        <img src="../images/food.png" align="center"><br>
                         <p>100</p> 
                       </div>
                     </div>
@@ -105,15 +123,15 @@
           </div>
           <div class="col-sm-12" align="center">
             <hr />
-            <img src="images/250.png" id="mixue" class="stretch-animation">
+            <img src="../images/250.png" id="mixue" class="stretch-animation">
           </div>
           <div id="imageConatiner" align="center">
           <div class="row">
             <div class="col-sm-6 d-grid mx-auto">
-              <img src="images/252.png" id="myImage" style="display:none;">
+              <img src="../images/252.png" id="myImage" style="display:none;">
             </div>
             <div class="col-sm-6 d-grid mx-auto">
-              <img src="images/253.png" id="myImage1" style="display:none;">
+              <img src="../images/253.png" id="myImage1" style="display:none;">
             </div>
           </div>
         </div>
@@ -140,7 +158,7 @@
             alert("Selamat anda memenangkan permainan ini");
             gameover++;
             setTimeout(function() {
-              window.location.href = 'a';
+              window.location.href = '../about/about.html';
             }, 3000);
 				  }
 			  }
