@@ -414,8 +414,12 @@
         gambarAsli.onclick = function() {
             if (gambarAsli.src == gambarLama) {
                 gambarAsli.src = gambarBaru;
+                gambarAsli.width = "200";
+                gambarAsli.height = "200";
                 setTimeout(function() {
                   gambarAsli.src = gambarLama;
+                  gambarAsli.width = "200";
+                  gambarAsli.height = "200";
                 }, 300); 
               }
         }
