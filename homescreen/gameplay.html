@@ -26,7 +26,7 @@
         </ul>
       </div>
       <div class="music">
-        <h1>Music: </h1>
+        <p>Music: </p>
         <label class="music-toggle" for="toogle-music"></label>
         <input type="checkbox" id="toogle-music" class="hidden-checkbox"></input>
         <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5"></input>
@@ -34,11 +34,12 @@
     </div>
   </nav>
   <div id="clock" style="background-color: blanchedalmond; text-align:center;"></div>
+  <div id="display-name" style="text-align: center"> </div>
   <div class="bg-image" style="background-image: url('images/bg-home.gif'); background-size: cover; background-attachment:fixed;background-repeat: no-repeat;max-height: fit-content ;padding: 20px;">
    <br><br><br>
     <div id="container-fluid mt-3" class="container" style="background-color: azure;padding:20px;border-radius: 30px;"> 
       <div class="row">
-        <div class="col-sm-2"  align="center" id="row1">
+        <div class="col-sm-2" align="center" id="row1">
           <div id="MoneyCounter">
             <p>
               <img src="../images/food.png" id="a">
@@ -165,6 +166,14 @@
     </div>
     </div>
     <script>
+
+      var username = sessionStorage.getItem("username");
+      if(username){
+            document.getElementById("display-name").innerHTML = username;
+      }else{
+        alert("Maaf nama character anda tidak dimasukkan ! Anda tidak bisa melanjutkan ke halaman selanjutnya!");
+              window.location.href = '../title/title.html';
+      }
 
       function Clock() {
         var now = new Date();

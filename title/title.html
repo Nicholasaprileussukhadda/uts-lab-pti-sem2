@@ -40,11 +40,11 @@
             <img id="gambartitle" src="../homescreen/images/mixue_idle.png" onclick="gantiGambar()" >
             <br>
            <div class="input-group">
-            <input type="text" id="username" required class="input" placeholder="Character's Name">
+            <input type="text" id="username" required class="input" placeholder="Character's Name" >
            </div>
         </div>
         <br>
-            <span class='start-btn' onclick="location.href='../homescreen/loadingscreen.html';" >START</span>
+            <span class='start-btn' onclick="simpanNama(),location.href='../homescreen/loadingscreen.html';" >START</span>
            </div>
         </div>
         <div class="parallax info">
@@ -114,6 +114,13 @@
                 }, 150); 
               }
         }
+
+        function simpanNama() {
+          var username = document.getElementById("username").value;
+          sessionStorage.setItem("username", username);
+    }
+    
+   
         </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
