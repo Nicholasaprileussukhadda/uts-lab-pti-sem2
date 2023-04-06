@@ -166,17 +166,16 @@
     </div>
     <script>
 
-      function Clock() {
-        var now = new Date();
-        var hours = now.getHours();
-        var minutes = now.getMinutes();
-        var second = now.getSeconds();
-        var timeString = hours + ":" + minutes + ":" + second;
-        document.getElementById("clock").innerHTML = timeString;
-      }
-      
-      setInterval(Clock, 1);
-  
+  function Clock() {
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+    var seconds = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+    var timeString = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("clock").innerHTML = timeString;
+  }
+
+  setInterval(Clock, 1);
 
         var money = 0;
         var counter = 0;
