@@ -22,16 +22,13 @@
           <li class="nav-item">
             <a class="nav-link" href="../about/about.html">About Us</a>
           </li>
-          <li class="music">
-            <audio id="bg-music" src="audio/mixue.mp3" volume="0.5" loop></audio>
-          </li>
-          <li class="music">
-            <input type="checkbox" id="toogle-music">On/Off Music</input>
-          </li>
-          <li class="music">
-            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">Volume</input>
-          </li>
         </ul>
+      </div>
+      <div>
+        <h3>Music: </h3>
+        <label class="music-toggle" for="toogle-music"><span class="checkmark"></span></label>
+        <input type="checkbox" id="toogle-music" class="hidden-checkbox"></input>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5" class="volume-slider"></input>
       </div>
     </div>
   </nav>
