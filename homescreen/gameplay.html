@@ -170,6 +170,14 @@
     </div>
     <script>
 
+      var username = sessionStorage.getItem("username");
+      if(username){
+            document.getElementById("display-name").innerHTML = username;
+      }else{
+        alert("Maaf nama character anda tidak dimasukkan ! Anda tidak bisa melanjutkan ke halaman selanjutnya!");
+              window.location.href = '../title/title.html';
+      }
+
   function Clock() {
     var now = new Date();
     var hours = now.getHours();
