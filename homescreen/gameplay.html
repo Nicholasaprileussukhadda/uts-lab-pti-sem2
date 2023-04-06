@@ -8,6 +8,7 @@
     <link hrel="stylesheet" src="autoclick.css">
 </head>
 <body>
+  <audio id="bg-music" src="audio/mixue.mp3" volume="0.5" loop></audio>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="../homescreen/gameplay.html">Missyue Clicker</a>
@@ -22,16 +23,13 @@
           <li class="nav-item">
             <a class="nav-link" href="../about/about.html">About Us</a>
           </li>
-          <li class="music">
-            <audio id="bg-music" src="audio/mixue.mp3" volume="0.5" loop></audio>
-          </li>
-          <li class="music">
-            <input type="checkbox" id="toogle-music">On/Off Music</input>
-          </li>
-          <li class="music">
-            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">Volume</input>
-          </li>
         </ul>
+      </div>
+      <div class="music">
+        <h1>Music: </h1>
+        <label class="music-toggle" for="toogle-music"></label>
+        <input type="checkbox" id="toogle-music" class="hidden-checkbox"></input>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5"></input>
       </div>
     </div>
   </nav>
@@ -151,14 +149,14 @@
     </div>
     <br>
     <footer>
-      <div id="container-fluid mt-3" class="container"  style="background-color: azure;padding:20px;border-radius: 30px;">
+      <div id="container-fluid mt-3" class="container" style="background-image: url('images/footer.png'); padding:20px; border-radius: 30px; color: white;">
       <div class="row mt-3 d-flex flex-md-row flex-column justify-content-between align-items-center text-center pt-3 pb-3 mx-auto">
           <div class="col-md-6 text-center mb-3 mb-md-0">
               <h5 class="fw-bold">Missyue Clicker</h5>
               <p>Created by Group 9</p>
               <p>&copy copyright 2023</p>
           </div>
-          <div class="col-md-6 d-flex justify-content-center">
+          <div class="col-md-6 d-flex justify-content-center" style="background-color: aliceblue; border-radius: 10px; max-width: fit-content; width: 150px; ">
               <a href="https://www.umn.ac.id/?gclid=Cj0KCQjwz6ShBhCMARIsAH9A0qVQt97EhNy_s9RZUcjBO5DhdSBqRIu4afR-F624j4SQ2hUJ7KnAqnQaAhKlEALw_wcB"><img src="../images/logo-akreditasi.png" class="img-fluid"></a>
           </div>
       </div>
